@@ -25,7 +25,13 @@
   </header>
 
   <div id="home" class="large-hero">
-    <img class="large-hero__image" src="assets/images/hero--large_w_1847-short.jpg" alt="Bushes, cables, clouds">
+    <picture>
+      <source srcset="assets/images/hero--large_w_1847-short.jpg 1847w, /assets/images/hero--large-hi-dpi_w_3127-short.jpg 3127w" media="(min-width: 1380px)">
+      <source srcset="assets/images/hero--medium_w_1262.jpg 1262w, /assets/images/hero--medium-hi-dpi_w_2191.jpg 2191w" media="(min-width: 990px)">
+      <source srcset="assets/images/hero--small_w_1020.jpg 1020w, /assets/images/hero--small-hi-dpi_w_2889.jpg 2889w" media="(min-width: 640px)">
+      <img class="large-hero__image" srcset="assets/images/hero--smaller_w_651.jpg 651w, ./assets/images/hero--smaller-hi-dpi_w_1292.jpg 1292w" alt="Bushes, cables, clouds">
+    </picture>
+    
     <div class="large-hero__text-content">
         <h1 class="large-hero__title">"АСКИ" ООД</h1>
         <h2 class="large-hero__subtitle">проектира, изработва и внедрява</h2>

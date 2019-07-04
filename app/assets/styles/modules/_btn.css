@@ -10,8 +10,12 @@
 	}
 
 	&--large {
-		font-size: 1.15rem;
-		padding: 1.1rem 1.9rem;
+		padding: .7rem 1rem;
+
+		@mixin atSmall {
+			padding: 1.1rem 1.9rem;
+			font-size: 1.15rem;
+		}
 	}
 
 	&--large:hover {
