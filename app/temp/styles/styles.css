@@ -969,3 +969,22 @@ Instead edit gulp/templates/sprite */
     height: 42px;
     background-position: 98.07885304659499% 79.14925373134328%;
   }
+
+.site-footer {
+	background-color: #fff;
+	color: #253b65;
+	padding: .5rem 0;
+	text-align: center;
+}
+
+.site-footer__text {
+		display: block;
+		margin-bottom: 1rem;
+		font-weight: 300;
+
+		/* @mixin atMedium {
+			display: inline;
+			margin-bottom: 0;
+			margin-right: 1.4rem;
+		} */
+	}
