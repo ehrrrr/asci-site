@@ -684,12 +684,21 @@ a {
 		.row__b-margin-until-medium {
 			margin-bottom: 0;
 		}
+
 		.row--gutters {
 			padding-right: -65px;
 		}
 
+		.row--gutters-large {
+			padding-right: -100px;
+		}
+
 		.row--gutters > div {
 			padding-right: 65px;
+		}
+
+		.row--gutters-large > div {
+			padding-right: 100px;
 		}
 
 		.row__medium-4 {
@@ -699,6 +708,11 @@ a {
 
 		.row__medium-4--larger {
 			width: 37%;
+		}
+
+		.row__medium-6 {
+			float: left;
+			width: 50%;
 		}
 
 		.row__medium-8 {
@@ -711,9 +725,26 @@ a {
 		}
 	}
 
+/*Begin Equal Height Rules*/
+
+@media (min-width: 800px) {
+
+.row--equal-height-at-medium {
+			display: -webkit-box;
+			display: flex
+	}
+	}
+
+.row--equal-height-at-medium > div {
+			float: none;
+			display: -webkit-box;
+			display: flex;
+		}
+
 .generic-content-container p {
 		line-height: 1.65;
-		margin: 1.8rem 0;
+		margin: 0 0 1.8rem 0;
+		font-weight: 300;
 	}
 
 @media (min-width: 530px) {
@@ -725,4 +756,109 @@ a {
 
 .generic-content-container p a {
 		font-weight: 700;
+	}
+
+.section-title {
+	font-size: 2.55rem;
+	font-weight: 300;
+	text-align: center;
+}
+
+@media (min-width: 530px) {
+
+.section-title {
+		font-size: 2.85rem
+}
+	}
+
+@media (min-width: 800px) {
+
+.section-title {
+		font-size: 3.4rem
+}
+	}
+
+@media (min-width: 1200px) {
+
+.section-title {
+		font-size: 3.75rem
+}
+	}
+
+.section-title strong {
+		font-weight: 500;
+	}
+
+.section-title__icon {
+		display: block;
+		margin: 0 auto .6rem auto;
+	}
+
+@media (min-width: 530px) {
+
+.section-title__icon {
+			position: relative;
+			top: 8px;
+			margin: 0 0 0 .5rem;
+			display: inline-block
+	}
+	}
+
+.product-item {
+	position: relative;
+	padding-bottom: 1rem;
+}
+
+@media (min-width: 530px) {
+
+.product-item {
+		padding-left: 95px
+}
+	}
+
+@media (min-width: 800px) {
+		.product-item--fixed-min-height {
+			min-height: 240px;
+		}
+	}
+
+.product-item__icon {
+		display: block;
+		margin: 0 auto;
+	}
+
+@media (min-width: 530px) {
+
+.product-item__icon {
+			position: absolute;
+			left: 0
+	}
+	}
+
+.product-item__title {
+		font-weight: 300;
+		margin-bottom: .8rem;
+		margin-top: .7em;
+		font-size: 1.6rem;
+		text-align: center;
+	}
+
+@media (min-width: 530px) {
+
+.product-item__title {
+			font-size: 1.875rem;
+			margin-top: 1em;
+			text-align: left
+	}
+	}
+
+.product-item p {
+		text-align: center;
+	}
+
+@media (min-width: 530px) {
+
+.product-item p {
+			text-align: left
+	}
 	}
