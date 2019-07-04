@@ -24,7 +24,7 @@
     </nav>
   </header>
 
-  <div id="home" class="large-hero">
+  <div id="home" class="large-hero wrapper--b-bottom">
     <picture>
       <source srcset="assets/images/hero--large_w_1847-short.jpg 1847w, /assets/images/hero--large-hi-dpi_w_3127-short.jpg 3127w" media="(min-width: 1380px)">
       <source srcset="assets/images/hero--medium_w_1262.jpg 1262w, /assets/images/hero--medium-hi-dpi_w_2191.jpg 2191w" media="(min-width: 990px)">
@@ -33,41 +33,60 @@
     </picture>
     
     <div class="large-hero__text-content">
+      <div class="wrapper">
         <h1 class="large-hero__title">"АСКИ" ООД</h1>
         <h2 class="large-hero__subtitle">проектира, изработва и внедрява</h2>
         <p class="large-hero__description">електроизмервателно оборудване и автоматизирани системи за енергиен мениджмънт и контрол.</p>
         <p><a class="btn btn--orange btn--large" href="#">Виж Продуктите</a></p>
+      </div>    
     </div>
   </div>
 
-  <div id="about-us">
-    <img src="assets/images/about.jpg" alt="power pole">
-    <h2>За фирмата&hellip;</h2>
-    <p>„АСКИ“ ООД е създадена 1996 г. и работи в областта на компютърните технологии, информационните системи и измервателната техника. Дейността е развита в две направления - проектиране и производство. Фирмата предлага на своите клиенти изпитани и висококачествени продукти и услуги с голям гаранционен срок.</p>
-    <p>„АСКИ“ ООД е разработила пълната гама електронни електромери, голяма част от тях са в серийно производство, други се изработват по поръчка.</p>
-    <p>В момента фирмата разработва ново поколение информационни системи за енергиен мениджмънт и дистанционно отчитане на измервателни устройства на индустриални и битови потребители.</p>
-    <p>В бъдеще фирмата ще разширява гамата измервателни уреди и комуникационни устройства и ще работи в областта на изграждане на системи тип SCADA.</p>
+  <div id="about-us" class="page-section">
+    <div class="wrapper">
+        <div class="row row--gutters">
+            <div class="row__medium-4 row__medium-4--larger row__b-margin-until-medium">
+              <picture>
+                <source sizes="404px" srcset="assets/images/about.jpg 404w, assets/images/about-hi-dpi.jpg 808w" media="(min-width: 1020px)"> 
+                <source sizes="320px" srcset="assets/images/about-portrait.jpg 382w, assets/images/about-portrait-hi-dpi.jpg 683w" media="(min-width: 800px)"> 
+                <img srcset="./assets/images/about-lanscape-small.jpg 560w, ./assets/images/about-lanscape.jpg 800w, assets/images/about-lanscape-hi-dpi.jpg 1600w" alt="power pole">
+              </picture>
+            </div>
+      
+            <div class="row__medium-8 row__medium-8--smaller">
+              <div class="generic-content-container">
+                  <h2 class="headline headline--no-t-margin headline--b-margin-small">За фирмата</h2>
+                  <p>„АСКИ“ ООД е създадена 1996 г. и работи в областта на компютърните технологии, информационните системи и измервателната техника. Дейността е развита в две направления - проектиране и производство. Фирмата предлага на своите клиенти изпитани и висококачествени продукти и услуги с голям гаранционен срок.</p>
+                  <p>„АСКИ“ ООД е разработила пълната гама електронни електромери, голяма част от тях са в серийно производство, други се изработват по поръчка.</p>
+                  <p>В момента фирмата разработва ново поколение информационни системи за енергиен мениджмънт и дистанционно отчитане на измервателни устройства на индустриални и битови потребители.</p>
+                  <p>В бъдеще фирмата ще разширява гамата измервателни уреди и комуникационни устройства и ще работи в областта на изграждане на системи тип SCADA.</p>
+                </div>
+              </div>
+          </div> 
+    </div>
   </div>
 
-  <div id="products">
-    <img src="assets/images/icons/star.svg">
-    <h2>Продукти</h2>
-  
-    <img src="assets/images/icons/rain.svg">
-    <h3>Електромери</h3>
-    <p>Гама еднофазни и трифазни електронни електромери. Възможност за измерване на всички величини в трифазната система (активна и реактивна енергия в четирите квадранта, ток, напрежение и фактор на мощността). Дистанционно отчитане по RS-485, Modbus или LAN.</p>
+  <div id="products"  class="page-section  page-section--blue">
+    <div class="wrapper">
+      <img src="assets/images/icons/star.svg">
+      <h2>Продукти</h2>
     
-    <img src="assets/images/icons/globe.svg">
-    <h3>Периферни устройства</h3>
-    <p>Мрежови концентратори. Протоколни конвертори (RS-232, RS-485, LAN). Оптични конвертори (EN 62056-21).</p>
+      <img src="assets/images/icons/rain.svg">
+      <h3>Електромери</h3>
+      <p>Гама еднофазни и трифазни електронни електромери. Възможност за измерване на всички величини в трифазната система (активна и реактивна енергия в четирите квадранта, ток, напрежение и фактор на мощността). Дистанционно отчитане по RS-485, Modbus или LAN.</p>
+      
+      <img src="assets/images/icons/globe.svg">
+      <h3>Периферни устройства</h3>
+      <p>Мрежови концентратори. Протоколни конвертори (RS-232, RS-485, LAN). Оптични конвертори (EN 62056-21).</p>
 
-    <img src="assets/images/icons/wifi.svg">
-    <h3>Информационни системи</h3>
-    <p>СДО за офис-сгради и битови консуматори. Система за снемане на товарови графици.</p>
+      <img src="assets/images/icons/wifi.svg">
+      <h3>Информационни системи</h3>
+      <p>СДО за офис-сгради и битови консуматори. Система за снемане на товарови графици.</p>
 
-    <img src="assets/images/icons/fire.svg">
-    <h3>Специализирани изделия</h3>
-    <p>Оборудване в областта на физиката на високите енергии.</p>
+      <img src="assets/images/icons/fire.svg">
+      <h3>Специализирани изделия</h3>
+      <p>Оборудване в областта на физиката на високите енергии.</p>
+    </div>  
   </div>
 
   <footer>

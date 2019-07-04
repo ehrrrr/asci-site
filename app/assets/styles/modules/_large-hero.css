@@ -1,7 +1,9 @@
 .large-hero {
 	position: relative;
+	border-bottom: 10px solid $mainBlue;
 
 	&__image {
+		display: block;
 		filter: brightness(80%) blur(3px);
 	}
 
@@ -12,8 +14,6 @@
 		width: 100%;
 		text-align: center;
 		transform: translateY(-54%);
-		/* background-color: rgba(0, 0, 0, .1);
-		padding: 50px 0; */
 	}
 
 	&__title {
