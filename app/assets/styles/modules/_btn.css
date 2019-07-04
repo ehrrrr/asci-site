@@ -1,0 +1,70 @@
+.btn {
+	background-color: $mainBlue;
+	color: #fff;
+	text-decoration: none;
+	padding: .75rem 1.2rem;
+	display: inline-block;
+
+	&--orange {
+		background-color: $mainOrange;
+	}
+
+	&--large {
+		font-size: 1.15rem;
+		padding: 1.1rem 1.9rem;
+	}
+
+	&--large:hover {
+		cursor: pointer;
+		animation: jelly 0.5s;
+	}
+
+	@keyframes jelly {
+		0%,
+		100% {
+			transform: scale(1, 1);
+		}
+		25% {
+			transform: scale(0.9, 1.1);
+		}
+		50% {
+			transform: scale(1.1, 0.9);
+		}
+		75% {
+			transform: scale(0.95, 1.05);
+		}
+	}
+
+	&--bubble {
+		outline: none;
+		border: none;
+		z-index: 1;
+		position: relative;
+		overflow: hidden;
+		transition: color 0.4s ease-in-out;
+	}
+
+	&--bubble::before {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		top: 100%;
+		left: 100%;
+		width: 2em;
+		height: 1em;
+		border-radius: 50%;
+		background-color: #3cefff;
+		transform-origin: center;
+		transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+		transition: transform 0.45s ease-in-out;
+	}
+
+	&--bubble:hover {
+		cursor: pointer;
+		color: $mainBlue;
+	}
+
+	&--bubble:hover::before {
+		transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+	}
+}

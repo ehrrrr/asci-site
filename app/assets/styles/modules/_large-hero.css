@@ -1,0 +1,42 @@
+.large-hero {
+	position: relative;
+
+	&__image {
+		filter: brightness(80%) blur(3px);
+	}
+
+	&__text-content {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		transform: translateY(-54%);
+		/* background-color: rgba(0, 0, 0, .1);
+		padding: 50px 0; */
+	}
+
+	&__title {
+		font-weight: 300;
+		color: $mainBlue;
+		/* color: #3b475f; */
+		font-size: 4.4rem;
+		margin: 0;
+	}
+
+	&__subtitle {
+		font-weight: 300;
+		color: $mainBlue;
+		font-size: 2.5rem;
+		margin: 0 0 1.8rem 0;
+	}
+
+	&__description {
+		font-weight: 100;
+		color: #fff;
+		font-size: 1.675rem;
+		text-shadow: 1px 1px 20px black;
+		max-width: 30rem;
+		margin: 0 auto;
+	}
+}
