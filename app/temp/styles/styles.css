@@ -884,3 +884,88 @@ a {
 			text-align: left
 	}
 	}
+
+/* Do not edit modules/_sprite directly as it is generated automatically by Gulp.
+Instead edit gulp/templates/sprite */
+
+.icon {
+      background-image: url('/assets/images/sprites/sprite-3ab5cb52.svg');
+    }
+
+.icon--aski-logo {
+    width: 60.1px;
+    height: 18.1px;
+    background-position: 34.80152256661229% 40.53198226725776%;
+  }
+
+.icon--aski-logo-black {
+    width: 60.1px;
+    height: 18.1px;
+    background-position: 34.80152256661229% 51.99493350221659%;
+  }
+
+.icon--comment {
+    width: 64px;
+    height: 64px;
+    background-position: 0 0;
+  }
+
+.icon--facebook {
+    width: 21.23px;
+    height: 42.01px;
+    background-position: 82.59639987430982% 79.15516083289798%;
+  }
+
+.icon--fire {
+    width: 56px;
+    height: 64px;
+    background-position: 34.04255319148936% 0;
+  }
+
+.icon--globe {
+    width: 64px;
+    height: 64px;
+    background-position: 66.66666666666667% 0;
+  }
+
+.icon--instagram {
+    width: 42.01px;
+    height: 42.01px;
+    background-position: 63.36947373632358% 83.5883274871259%;
+  }
+
+.icon--mail {
+    width: 64px;
+    height: 48px;
+    background-position: 0 50%;
+  }
+
+.icon--rain {
+    width: 64px;
+    height: 64px;
+    background-position: 0 100%;
+  }
+
+.icon--star {
+    width: 64px;
+    height: 64px;
+    background-position: 35.55555555555556% 100%;
+  }
+
+.icon--twitter {
+    width: 51.78px;
+    height: 42.06px;
+    background-position: 95.72364998439288% 47.78258921905331%;
+  }
+
+.icon--wifi {
+    width: 60px;
+    height: 64px;
+    background-position: 100% 0;
+  }
+
+.icon--youtube {
+    width: 34.75px;
+    height: 42px;
+    background-position: 98.07885304659499% 79.14925373134328%;
+  }
