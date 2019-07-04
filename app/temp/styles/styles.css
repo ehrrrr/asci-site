@@ -396,27 +396,27 @@ a {
 		font-weight: 300;
 		color: #253b65;
 		margin: 0;
-		font-size: 2.8rem;
+		font-size: 2.5rem;
 	}
 
 @media (min-width: 530px) {
 
 .large-hero__title {
-			font-size: 3.4rem
+			font-size: 2.8rem
 	}
 	}
 
 @media (min-width: 800px) {
 
 .large-hero__title {
-			font-size: 4.2rem
+			font-size: 3.2rem
 	}
 	}
 
 @media (min-width: 1200px) {
 
 .large-hero__title {
-			font-size: 4.5rem
+			font-size: 3.5rem
 	}
 	}
 
@@ -424,27 +424,30 @@ a {
 		font-weight: 300;
 		color: #253b65;
 		font-size: 1.4rem;
-		margin: 0 0 1.8rem 0;
+		margin: 0 0 1rem 0;
 	}
 
 @media (min-width: 530px) {
 
 .large-hero__subtitle {
-			font-size: 2rem
+			font-size: 1.6rem;
+			margin: 0 0 1.4rem 0
 	}
 	}
 
 @media (min-width: 800px) {
 
 .large-hero__subtitle {
-			font-size: 2.2rem
+			font-size: 1.8rem;
+			margin: 0 0 1.6rem 0
 	}
 	}
 
 @media (min-width: 1200px) {
 
 .large-hero__subtitle {
-			font-size: 2.4rem
+			font-size: 2rem;
+			margin: 0 0 1.8rem 0
 	}
 	}
 
@@ -467,14 +470,14 @@ a {
 @media (min-width: 800px) {
 
 .large-hero__description {
-			font-size: 1.35rem
+			font-size: 1.3rem
 	}
 	}
 
 @media (min-width: 1200px) {
 
 .large-hero__description {
-			font-size: 1.5rem
+			font-size: 1.4rem
 	}
 	}
 
@@ -529,6 +532,7 @@ a {
 	text-decoration: none;
 	padding: .75rem 1.2rem;
 	display: inline-block;
+	font-size: 1rem;
 
 	@-webkit-keyframes jelly {
 		0%,
@@ -562,7 +566,13 @@ a {
 @media (min-width: 530px) {
 
 .btn--large {
-			padding: 1.1rem 1.9rem;
+			padding: 1.1rem 1.9rem
+	}
+	}
+
+@media (min-width: 1200px) {
+
+.btn--large {
 			font-size: 1.15rem
 	}
 	}
@@ -750,7 +760,7 @@ a {
 @media (min-width: 530px) {
 
 .generic-content-container p {
-			font-size: 1.125rem
+			font-size: 1rem
 	}
 	}
 
@@ -759,7 +769,7 @@ a {
 	}
 
 .section-title {
-	font-size: 2.55rem;
+	font-size: 2.2rem;
 	font-weight: 300;
 	text-align: center;
 }
@@ -767,21 +777,21 @@ a {
 @media (min-width: 530px) {
 
 .section-title {
-		font-size: 2.85rem
+		font-size: 2.4rem
 }
 	}
 
 @media (min-width: 800px) {
 
 .section-title {
-		font-size: 3.4rem
+		font-size: 2.6rem
 }
 	}
 
 @media (min-width: 1200px) {
 
 .section-title {
-		font-size: 3.75rem
+		font-size: 3rem
 }
 	}
 
@@ -818,7 +828,19 @@ a {
 
 @media (min-width: 800px) {
 		.product-item--fixed-min-height {
-			min-height: 240px;
+			min-height: 385px;
+		}
+	}
+
+@media (min-width: 890px) {
+		.product-item--fixed-min-height {
+			min-height: 260px;
+		}
+	}
+
+@media (min-width: 1200px) {
+		.product-item--fixed-min-height {
+			min-height: 250px;
 		}
 	}
 

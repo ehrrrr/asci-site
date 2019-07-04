@@ -8,7 +8,19 @@
 
 	@mixin atMedium {
 		&--fixed-min-height {
-			min-height: 240px;
+			min-height: 385px;
+		}
+	}
+
+	@mixin atMiddleMedium {
+		&--fixed-min-height {
+			min-height: 260px;
+		}
+	}
+
+	@mixin atLarge {
+		&--fixed-min-height {
+			min-height: 250px;
 		}
 	}
 

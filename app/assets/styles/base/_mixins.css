@@ -18,6 +18,12 @@
 	}
 }
 
+@define-mixin atMiddleMedium {
+	@media (min-width: 890px) {
+		@mixin-content;
+	}
+}
+
 @define-mixin atLarge {
 	@media (min-width: 1200px) {
 		@mixin-content;
