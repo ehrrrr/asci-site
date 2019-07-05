@@ -533,26 +533,6 @@ a {
 	padding: .75rem 1.2rem;
 	display: inline-block;
 	font-size: 1rem;
-
-	@-webkit-keyframes jelly {
-		0%,
-		100% {
-			-webkit-transform: scale(1, 1);
-			        transform: scale(1, 1);
-		}
-		25% {
-			-webkit-transform: scale(0.9, 1.1);
-			        transform: scale(0.9, 1.1);
-		}
-		50% {
-			-webkit-transform: scale(1.1, 0.9);
-			        transform: scale(1.1, 0.9);
-		}
-		75% {
-			-webkit-transform: scale(0.95, 1.05);
-			        transform: scale(0.95, 1.05);
-		}
-	}
 }
 
 .btn--orange {
@@ -581,6 +561,26 @@ a {
 		cursor: pointer;
 		-webkit-animation: jelly 0.5s;
 		        animation: jelly 0.5s;
+	}
+
+@-webkit-keyframes jelly {
+		0%,
+		100% {
+			-webkit-transform: scale(1, 1);
+			        transform: scale(1, 1);
+		}
+		25% {
+			-webkit-transform: scale(0.9, 1.1);
+			        transform: scale(0.9, 1.1);
+		}
+		50% {
+			-webkit-transform: scale(1.1, 0.9);
+			        transform: scale(1.1, 0.9);
+		}
+		75% {
+			-webkit-transform: scale(0.95, 1.05);
+			        transform: scale(0.95, 1.05);
+		}
 	}
 
 @keyframes jelly {
@@ -622,7 +622,9 @@ a {
 		width: 2em;
 		height: 1em;
 		border-radius: 50%;
-		background-color: #3cefff;
+		background-color: #554c3d;
+		/* background-color: $skyBlue; */
+		/* background-color: #3cefff; */
 		-webkit-transform-origin: center;
 		        transform-origin: center;
 		-webkit-transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
@@ -635,7 +637,8 @@ a {
 
 .btn--bubble:hover {
 		cursor: pointer;
-		color: #253b65;
+		color: #fff;
+		/* color: $mainBlue; */
 	}
 
 .btn--bubble:hover::before {
@@ -970,6 +973,99 @@ Instead edit gulp/templates/sprite */
     background-position: 98.07885304659499% 79.14925373134328%;
   }
 
+.site-header {
+	position: absolute;
+	z-index: 2;
+	background-color: rgba(37,59,101, .3);
+	width: 100%;
+}
+
+/* pdding: 9px 0; */
+
+.site-header__btn_container {
+		float: right;
+	}
+
+.site-header__logo {
+		position: absolute;
+		top: 0;
+		background-color: #253b65;
+		padding: 25px 36px;
+	}
+
+.site-header__logo img {
+			width: 160px;
+			height: auto;
+		}
+
+.primary-nav--pull-right {
+		float: right;
+	}
+
+.primary-nav ul {
+		padding: 0;
+	}
+
+.primary-nav ul::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+.primary-nav li {
+		list-style: none;
+		float: left;
+		padding-right: 20px;
+	}
+
+.primary-nav li a {
+		color: #fff;
+		text-decoration: none;
+		font-weight: 300;
+		padding-bottom: 5px;
+	}
+
+.primary-nav li a:hover {
+		color: #554c3d;
+		font-weight: 400;
+	}
+
+.primary-nav__item--underline {
+		position: relative;
+	}
+
+.primary-nav__item--underline::before,
+	.primary-nav__item--underline::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 2px;
+		background-color: #554c3d;
+		-webkit-transform-origin: center;
+		        transform-origin: center;
+		-webkit-transform: scaleY(0);
+		        transform: scaleY(0);
+		-webkit-transition: -webkit-transform 0.5s ease;
+		transition: -webkit-transform 0.5s ease;
+		transition: transform 0.5s ease;
+		transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+	}
+
+.primary-nav__item--underline::before {
+		left: -8px;
+	}
+
+.primary-nav__item--underline::after {
+		right: -8px;
+	}
+
+.primary-nav__item--underline:hover::before,
+	.primary-nav__item--underline:hover::after {
+		-webkit-transform: scaleY(1);
+		        transform: scaleY(1);
+	}
+
 .site-footer {
 	background-color: #fff;
 	color: #253b65;
@@ -988,3 +1084,6 @@ Instead edit gulp/templates/sprite */
 			margin-right: 1.4rem;
 		} */
 	}
+
+a {
+}

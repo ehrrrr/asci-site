@@ -13,16 +13,23 @@
   <link rel="stylesheet" href="./temp/styles/styles.css">
 </head>
 <body>
-  <header>
-    <img id="logo" src="assets/images/icons/aski-logo.svg">
-    <a class="btn btn--bubble" href="#">Контакти</a>
-    <nav>
-      <ul>
-        <li><a href="#home">Начало</a></li>
-        <li><a href="#about-us">За нас</a></li>
-        <li><a href="#products">Продукти</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="wrapper">
+      <div class="site-header__logo">
+        <img id="logo" src="assets/images/icons/aski-logo.svg">
+      </div>
+
+      <div class="site-header__btn_container">
+          <a class="btn btn--bubble" href="#">Контакти</a>
+      </div>
+      <nav class="primary-nav primary-nav--pull-right">
+        <ul>
+          <li><span class="primary-nav__item--underline"> <a href="#home">Начало</a></span></li>
+          <li><span class="primary-nav__item--underline"> <a href="#about-us">За нас</a></span></li>
+          <li><span class="primary-nav__item--underline"> <a href="#products">Продукти</a></span></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <div id="home" class="large-hero wrapper--b-bottom">

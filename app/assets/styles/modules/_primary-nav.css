@@ -1,0 +1,58 @@
+.primary-nav {
+	&--pull-right {
+		float: right;
+	}
+
+	ul {
+		@mixin clearfix margin: 0;
+		padding: 0;
+	}
+
+	li {
+		list-style: none;
+		float: left;
+		padding-right: 20px;
+	}
+
+	li a {
+		color: #fff;
+		text-decoration: none;
+		font-weight: 300;
+		padding-bottom: 5px;
+	}
+
+	li a:hover {
+		color: $dimGray;
+		font-weight: 400;
+	}
+
+	&__item--underline {
+		position: relative;
+	}
+
+	&__item--underline::before,
+	&__item--underline::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 2px;
+		background-color: $dimGray;
+		transform-origin: center;
+		transform: scaleY(0);
+		transition: transform 0.5s ease;
+	}
+
+	&__item--underline::before {
+		left: -8px;
+	}
+
+	&__item--underline::after {
+		right: -8px;
+	}
+
+	&__item--underline:hover::before,
+	&__item--underline:hover::after {
+		transform: scaleY(1);
+	}
+}

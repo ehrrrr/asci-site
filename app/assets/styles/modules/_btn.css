@@ -61,7 +61,9 @@
 		width: 2em;
 		height: 1em;
 		border-radius: 50%;
-		background-color: #3cefff;
+		background-color: $dimGray;
+		/* background-color: $skyBlue; */
+		/* background-color: #3cefff; */
 		transform-origin: center;
 		transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
 		transition: transform 0.45s ease-in-out;
@@ -69,7 +71,8 @@
 
 	&--bubble:hover {
 		cursor: pointer;
-		color: $mainBlue;
+		color: #fff;
+		/* color: $mainBlue; */
 	}
 
 	&--bubble:hover::before {
