@@ -16,19 +16,24 @@
   <header class="site-header">
     <div class="wrapper">
       <div class="site-header__logo">
-        <img id="logo" src="assets/images/icons/aski-logo.svg">
+        <!-- <img id="logo" src="assets/images/icons/aski-logo.svg"> -->
+        <div class="icon icon--aski-logo site-header__logo__graphic">АСКИ ООД</div>
       </div>
-
-      <div class="site-header__btn_container">
-          <a class="btn btn--bubble" href="#">Контакти</a>
+      <div class="site-header__menu-icon">
+        <div class="site-header__menu-icon__middle"></div>
       </div>
-      <nav class="primary-nav primary-nav--pull-right">
-        <ul>
-          <li><span class="primary-nav__item--underline"> <a href="#home">Начало</a></span></li>
-          <li><span class="primary-nav__item--underline"> <a href="#about-us">За нас</a></span></li>
-          <li><span class="primary-nav__item--underline"> <a href="#products">Продукти</a></span></li>
-        </ul>
-      </nav>
+      <div class="site-header__menu-content">
+        <div class="site-header__btn_container">
+            <a class="btn btn--bubble" href="#">Контакти</a>
+        </div>
+        <nav class="primary-nav primary-nav--pull-right">
+          <ul>
+            <li><span class="primary-nav__item--underline"> <a href="#home">Начало</a></span></li>
+            <li><span class="primary-nav__item--underline"> <a href="#about-us">За нас</a></span></li>
+            <li><span class="primary-nav__item--underline"> <a href="#products">Продукти</a></span></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -45,7 +50,7 @@
         <h1 class="large-hero__title">"АСКИ" ООД</h1>
         <h2 class="large-hero__subtitle">проектира, изработва и внедрява</h2>
         <p class="large-hero__description">електроизмервателно оборудване и автоматизирани системи за енергиен мениджмънт и контрол.</p>
-        <p><a class="btn btn--orange btn--large" href="#">Виж Продуктите</a></p>
+        <p><a class="btn btn--orange btn--jelly btn--large" href="#">Виж Продуктите</a></p>
       </div>    
     </div>
   </div>
@@ -85,12 +90,14 @@
             <span class="icon icon--rain product-item__icon"></span>
             <h3 class="product-item__title">Електромери</h3>
             <p>Гама еднофазни и трифазни електронни електромери. Възможност за измерване на всички величини в трифазната система. Дистанционно отчитане по RS-485, Modbus или LAN.</p>
+            <a href="" class="btn btn--outline btn--small btn--jelly">Виж повече</a>
           </div>
           
           <div class="product-item">
             <span class="icon icon--wifi product-item__icon"></span>
             <h3 class="product-item__title">Информационни системи</h3>
             <p>СДО за офис-сгради и битови консуматори. <br> Система за снемане на товарови графици.</p>
+            <a href="" class="btn btn--outline btn--small btn--jelly">Виж повече</a>
           </div>
         </div>
         
@@ -99,12 +106,14 @@
             <span class="icon icon--fire product-item__icon"></span>
             <h3 class="product-item__title">Периферни устройства</h3>
             <p>Мрежови концентратори. <br> Протоколни конвертори (RS-232, RS-485, LAN). <br> Оптични конвертори (EN 62056-21).</p>
+            <a href="" class="btn btn--outline btn--small btn--jelly">Виж повече</a>
           </div>
           
           <div class="product-item">
             <span class="icon icon--globe product-item__icon"></span>
             <h3 class="product-item__title">Специализирани изделия</h3>
             <p>Оборудване в областта на физиката на високите енергии.</p>
+            <a href="" class="btn btn--outline btn--small btn--jelly">Виж повече</a>
           </div>
         </div>
       </div>
@@ -113,8 +122,10 @@
 
   <footer class="site-footer">
     <div class="wrapper">
-        <p><span class="site-footer__text">Copyright &copy; 2019 "АСКИ" ООД</span> <a class="btn btn--orange btn--bubble" href="#">Свържете се с нас</a></p>
+        <p><span class="site-footer__text">Copyright &copy; 2019 "АСКИ" ООД</span> <a class="btn btn--bubble" href="#">Свържете се с нас</a></p>
     </div>
   </footer>
+
+  <script src="./temp/scripts/App.js"></script>
 </body>
 </html>

@@ -16,9 +16,9 @@ var config = {
 	}
 };
 
-// gulp.task('beginClean', function() {
-// 	return del([ './app/temp/sprite', './app/assets/images/sprites' ]);
-// });
+gulp.task('beginClean', function() {
+	return del([ './app/temp/sprite', './app/assets/images/sprites' ]);
+});
 
 gulp.task(
 	'createSprite',
@@ -47,11 +47,11 @@ gulp.task(
 	})
 );
 
-// gulp.task(
-// 	'endClean',
-// 	gulp.series([ 'copySpriteGraphic', 'copySpriteCSS' ], () => {
-// 		return del('./app/temp/sprite');
-// 	})
-// );
+gulp.task(
+	'endClean',
+	gulp.series([ 'copySpriteGraphic', 'copySpriteCSS' ], function() {
+		return del('./app/temp/sprite');
+	})
+);
 
-gulp.task('icons', gulp.series([ 'createSprite', 'copySpriteGraphic', 'copySpriteCSS' ]));
+gulp.task('icons', gulp.series([ 'createSprite', 'copySpriteGraphic', 'copySpriteCSS', 'endClean' ]));

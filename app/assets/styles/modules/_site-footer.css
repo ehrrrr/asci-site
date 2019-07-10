@@ -9,6 +9,10 @@
 		margin-bottom: 1rem;
 		font-weight: 300;
 
+		@mixin atSmallest {
+			font-size: .9rem;
+		}
+
 		/* @mixin atMedium {
 			display: inline;
 			margin-bottom: 0;

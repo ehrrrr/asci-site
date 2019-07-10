@@ -6,6 +6,12 @@
 	}
 }
 
+@define-mixin atSmallest {
+	@media (max-width: 360px) {
+		@mixin-content;
+	}
+}
+
 @define-mixin atSmall {
 	@media (min-width: 530px) {
 		@mixin-content;

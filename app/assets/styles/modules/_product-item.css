@@ -1,8 +1,11 @@
 .product-item {
 	position: relative;
-	padding-bottom: 1rem;
+	padding-bottom: 3rem;
+	text-align: center;
 
 	@mixin atSmall {
+		padding-bottom: 1rem;
+		text-align: left;
 		padding-left: 95px;
 	}
 
@@ -27,10 +30,15 @@
 	&__icon {
 		display: block;
 		margin: 0 auto;
+		transform: scale(.7);
 
 		@mixin atSmall {
 			position: absolute;
 			left: 0;
+		}
+
+		@mixin atMedium {
+			transform: scale(1);
 		}
 	}
 
@@ -40,6 +48,10 @@
 		margin-top: .7em;
 		font-size: 1.6rem;
 		text-align: center;
+
+		@mixin atSmallest {
+			font-size: 1.4rem;
+		}
 
 		@mixin atSmall {
 			font-size: 1.875rem;

@@ -1,6 +1,12 @@
 .primary-nav {
+	padding-top: 2px;
+	@mixin atMedium {
+		padding-top: 0;
+	}
 	&--pull-right {
-		float: right;
+		@mixin atMedium {
+			float: right;
+		}
 	}
 
 	ul {
@@ -10,49 +16,86 @@
 
 	li {
 		list-style: none;
-		float: left;
-		padding-right: 20px;
+		padding-right: 7px;
+		display: inline-block;
+
+		@mixin atMedium {
+			float: left;
+			display: block;
+			padding-right: 20px;
+		}
+	}
+
+	li:last-child {
+		padding-right: 0;
+		@mixin atMedium {
+			padding-right: 20px;
+		}
 	}
 
 	li a {
 		color: #fff;
 		text-decoration: none;
 		font-weight: 300;
-		padding-bottom: 5px;
+		padding: 6px 16px;
+		font-size: .8rem;
+		background-color: rgba($mainBlue, .8);
+
+		@mixin atMedium {
+			padding-bottom: 5px;
+			font-size: 1rem;
+			background-color: transparent;
+		}
 	}
 
 	li a:hover {
-		color: $dimGray;
 		font-weight: 400;
+
+		@mixin atMedium {
+			/* color: $dimGray; */
+			color: $mainBlue;
+		}
+	}
+
+	li a:active {
+		font-weight: 500;
+		color: $mainOrange;
+
+		@mixin atMedium {
+			color: $mainBlue;
+			/* color: $dimGray; */
+		}
 	}
 
 	&__item--underline {
-		position: relative;
-	}
+		@mixin atMedium {
+			position: relative;
 
-	&__item--underline::before,
-	&__item--underline::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		width: 2px;
-		background-color: $dimGray;
-		transform-origin: center;
-		transform: scaleY(0);
-		transition: transform 0.5s ease;
-	}
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				width: 2px;
+				background-color: $dimGray;
+				transform-origin: center;
+				transform: scaleY(0);
+				transition: transform 0.5s ease;
+			}
 
-	&__item--underline::before {
-		left: -8px;
-	}
+			&::before {
+				left: -8px;
+			}
 
-	&__item--underline::after {
-		right: -8px;
-	}
+			&::after {
+				right: -8px;
+			}
 
-	&__item--underline:hover::before,
-	&__item--underline:hover::after {
-		transform: scaleY(1);
+			&:hover::before,
+			&:hover::after {
+				transform: scaleY(1);
+			}
+		}
 	}
 }

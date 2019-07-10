@@ -16,11 +16,21 @@ gulp.task('watch', () => {
 		})
 	);
 	watch('./app/assets/styles/**/*.css', gulp.series('cssInject'));
+
+	watch('./app/assets/scripts/**/*.js', gulp.series('scriptsRefresh'));
 });
 
 gulp.task(
 	'cssInject',
 	gulp.series([ 'css' ], () => {
 		return gulp.src('./app/temp/styles/styles.css').pipe(browserSynk.stream());
+	})
+);
+
+gulp.task(
+	'scriptsRefresh',
+	gulp.series([ 'scripts' ], (done) => {
+		browserSynk.reload();
+		done();
 	})
 );
