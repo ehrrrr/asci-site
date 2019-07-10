@@ -18,7 +18,8 @@
 	"homepage": "https://github.com/ehrrrr/asci-site#readme",
 	"dependencies": {
 		"jquery": "^3.4.1",
-		"normalize.css": "^8.0.1"
+		"normalize.css": "^8.0.1",
+		"waypoints": "^4.0.1"
 	},
 	"devDependencies": {
 		"autoprefixer": "^9.6.0",
