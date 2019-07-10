@@ -1126,8 +1126,13 @@ Instead edit gulp/templates/sprite */
 @media (min-width: 800px) {
 
 .site-header {
+		position: fixed;
 		background-color: rgba(37,59,101, .3)
 }
+
+		.site-header--dark {
+			background-color: rgba(30,49,84, .8);
+		}
 	}
 
 @media (min-width: 800px) {
@@ -1143,6 +1148,10 @@ Instead edit gulp/templates/sprite */
 		left: 50%;
 		-webkit-transform: translateX(-50%) scale(.8);
 		        transform: translateX(-50%) scale(.8);
+		-webkit-transition: -webkit-transform .3s ease-out;
+		transition: -webkit-transform .3s ease-out;
+		transition: transform .3s ease-out;
+		transition: transform .3s ease-out, -webkit-transform .3s ease-out;
 		-webkit-transform-origin: 50% 0;
 		        transform-origin: 50% 0;
 		background-color: #253b65;
@@ -1164,6 +1173,14 @@ Instead edit gulp/templates/sprite */
 			        transform-origin: 50% 50%
 	}
 	}
+
+.site-header--dark .site-header__logo {
+			padding: 15px 36px;
+			-webkit-transform: scale(.643);
+			        transform: scale(.643);
+			-webkit-transform-origin: 50% 0;
+			        transform-origin: 50% 0;
+		}
 
 .site-header__logo__graphic {
 		text-indent: -9999px;
@@ -1331,7 +1348,7 @@ Instead edit gulp/templates/sprite */
 	}
 	}
 
-.primary-nav li a {
+.primary-nav a {
 		color: #fff;
 		text-decoration: none;
 		font-weight: 300;
@@ -1342,75 +1359,55 @@ Instead edit gulp/templates/sprite */
 
 @media (min-width: 800px) {
 
-.primary-nav li a {
+.primary-nav a {
 			padding-bottom: 5px;
 			font-size: 1rem;
 			background-color: transparent
 	}
-	}
 
-.primary-nav li a:hover {
-		font-weight: 400;
-	}
-
-@media (min-width: 800px) {
-
-.primary-nav li a:hover {
-			/* color: $dimGray; */
-			color: #253b65
-	}
-	}
-
-.primary-nav li a:active {
-		font-weight: 500;
-		color: #d59541;
-	}
-
-@media (min-width: 800px) {
-
-.primary-nav li a:active {
-			color: #253b65
-			/* color: $dimGray; */
-	}
-	}
-
-@media (min-width: 800px) {
-
-.primary-nav__item--underline {
-			position: relative
-	}
-
-			.primary-nav__item--underline::before,
-			.primary-nav__item--underline::after {
-				content: '';
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				width: 2px;
-				background-color: #554c3d;
-				-webkit-transform-origin: center;
-				        transform-origin: center;
-				-webkit-transform: scaleY(0);
-				        transform: scaleY(0);
-				-webkit-transition: -webkit-transform 0.5s ease;
-				transition: -webkit-transform 0.5s ease;
-				transition: transform 0.5s ease;
-				transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+			.primary-nav a.is-current-link {
+				color: #fabb69;
+				font-weight: 400;
 			}
 
-			.primary-nav__item--underline::before {
-				left: -8px;
+				@media (min-width: 800px) {
+
+			.primary-nav a.is-current-link {
+					position: relative
 			}
 
-			.primary-nav__item--underline::after {
-				right: -8px;
-			}
+					.primary-nav a.is-current-link.is-current-link::before,
+					.primary-nav a.is-current-link.is-current-link::after {
+						content: '';
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						width: 2px;
+						background-color: #554c3d;
+						-webkit-transform-origin: center;
+						        transform-origin: center;
+						-webkit-transform: scaleY(0);
+						        transform: scaleY(0);
+						-webkit-transition: -webkit-transform 0.5s ease;
+						transition: -webkit-transform 0.5s ease;
+						transition: transform 0.5s ease;
+						transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+					}
 
-			.primary-nav__item--underline:hover::before,
-			.primary-nav__item--underline:hover::after {
-				-webkit-transform: scaleY(1);
-				        transform: scaleY(1);
-			}
+					.primary-nav a.is-current-link.is-current-link::before {
+						left: -8px;
+					}
+
+					.primary-nav a.is-current-link.is-current-link::after {
+						right: -8px;
+					}
+
+					.primary-nav a.is-current-link.is-current-link:hover::before,
+					.primary-nav a.is-current-link.is-current-link:hover::after {
+						-webkit-transform: scaleY(1);
+						        transform: scaleY(1);
+					}
+	}
 	}
 
 .site-footer {

@@ -3,6 +3,7 @@
 	@mixin atMedium {
 		padding-top: 0;
 	}
+
 	&--pull-right {
 		@mixin atMedium {
 			float: right;
@@ -33,7 +34,7 @@
 		}
 	}
 
-	li a {
+	a {
 		color: #fff;
 		text-decoration: none;
 		font-weight: 300;
@@ -45,56 +46,40 @@
 			padding-bottom: 5px;
 			font-size: 1rem;
 			background-color: transparent;
-		}
-	}
 
-	li a:hover {
-		font-weight: 400;
+			&.is-current-link {
+				color: #fabb69;
+				font-weight: 400;
 
-		@mixin atMedium {
-			/* color: $dimGray; */
-			color: $mainBlue;
-		}
-	}
+				@mixin atMedium {
+					position: relative;
 
-	li a:active {
-		font-weight: 500;
-		color: $mainOrange;
+					&.is-current-link::before,
+					&.is-current-link::after {
+						content: '';
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						width: 2px;
+						background-color: $dimGray;
+						transform-origin: center;
+						transform: scaleY(0);
+						transition: transform 0.5s ease;
+					}
 
-		@mixin atMedium {
-			color: $mainBlue;
-			/* color: $dimGray; */
-		}
-	}
+					&.is-current-link::before {
+						left: -8px;
+					}
 
-	&__item--underline {
-		@mixin atMedium {
-			position: relative;
+					&.is-current-link::after {
+						right: -8px;
+					}
 
-			&::before,
-			&::after {
-				content: '';
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				width: 2px;
-				background-color: $dimGray;
-				transform-origin: center;
-				transform: scaleY(0);
-				transition: transform 0.5s ease;
-			}
-
-			&::before {
-				left: -8px;
-			}
-
-			&::after {
-				right: -8px;
-			}
-
-			&:hover::before,
-			&:hover::after {
-				transform: scaleY(1);
+					&.is-current-link:hover::before,
+					&.is-current-link:hover::after {
+						transform: scaleY(1);
+					}
+				}
 			}
 		}
 	}
