@@ -29,9 +29,15 @@ var config = {
 	}
 };
 
-gulp.task('beginClean', function() {
-	return del([ './app/temp/sprite', './app/assets/images/sprites' ]);
+gulp.task('clearTemp', function() {
+	return del([ './app/temp/sprite' ]);
 });
+
+gulp.task('clearImages', function() {
+	return del([ './app/assets/images/sprites' ]);
+});
+
+gulp.task('beginClean', gulp.series([ 'clearTemp', 'clearImages' ]));
 
 gulp.task(
 	'createSprite',
@@ -51,9 +57,16 @@ gulp.task(
 );
 
 gulp.task(
-	'copySpriteGraphic',
+	'copySpriteGraphicSvg',
 	gulp.series([ 'createPngCopy' ], function() {
-		return gulp.src('./app/temp/sprite/css/**/*.{svg,png}').pipe(gulp.dest('./app/assets/images/sprites'));
+		return gulp.src('./app/temp/sprite/css/**/*.svg').pipe(gulp.dest('./app/assets/images/sprites'));
+	})
+);
+
+gulp.task(
+	'copySpriteGraphicPng',
+	gulp.series(function() {
+		return gulp.src('./app/temp/sprite/css/**/*.png').pipe(gulp.dest('./app/assets/images/sprites'));
 	})
 );
 
@@ -69,9 +82,20 @@ gulp.task(
 
 gulp.task(
 	'endClean',
-	gulp.series([ 'copySpriteGraphic', 'copySpriteCSS' ], function() {
+	gulp.series([ 'copySpriteGraphicSvg', 'copySpriteGraphicPng', 'copySpriteCSS' ], function() {
 		return del('./app/temp/sprite');
 	})
 );
 
-gulp.task('icons', gulp.series([ 'createSprite', 'createPngCopy', 'copySpriteGraphic', 'copySpriteCSS', 'endClean' ]));
+gulp.task(
+	'icons',
+	gulp.series([
+		'beginClean',
+		'createSprite',
+		'createPngCopy',
+		'copySpriteGraphicSvg',
+		'copySpriteGraphicPng',
+		'copySpriteCSS',
+		'endClean'
+	])
+);
