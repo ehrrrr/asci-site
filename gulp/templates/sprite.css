@@ -2,20 +2,20 @@
 Instead edit gulp/templates/sprite */
 
 {{#shapes}}
-
   {{#first}}
     .icon {
-      background-image: url('../../app/assets/images/sprites/{{{sprite}}}');
-    }
+        background-image: url('../../assets/images/sprites/{{{sprite}}}');
+      }
 
-    .no-svg .icon {
-      background-image: url('../../app/assets/images/sprites/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}')
-    }
+      .no-svg .icon {
+        background-image: url('../../assets/images/sprites/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}');
+      }
+
   {{/first}}
 
-  .icon--{{base}} {
+    .icon--{{base}} {
     width: {{width.outer}}px;
     height: {{height.outer}}px;
     background-position: {{position.relative.xy}};
-  }
+    }
 {{/shapes}}
