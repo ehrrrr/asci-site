@@ -11,6 +11,7 @@
   <link rel="shortcut icon" href="./assets/images/favicon-32x32.png">
   <link rel="apple-touch-icon" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./temp/styles/styles.css">
+  <script src="./temp/scripts/Vendor.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -39,10 +40,10 @@
 
   <div class="large-hero wrapper--b-bottom">
     <picture>
-      <source srcset="assets/images/hero--large_w_1847-short.jpg 1847w, /assets/images/hero--large-hi-dpi_w_3127-short.jpg 3127w" media="(min-width: 1380px)">
-      <source srcset="assets/images/hero--medium_w_1262.jpg 1262w, /assets/images/hero--medium-hi-dpi_w_2191.jpg 2191w" media="(min-width: 990px)">
-      <source srcset="assets/images/hero--small_w_1020.jpg 1020w, /assets/images/hero--small-hi-dpi_w_2889.jpg 2889w" media="(min-width: 640px)">
-      <img class="large-hero__image" srcset="assets/images/hero--smaller_w_651.jpg 651w, ./assets/images/hero--smaller-hi-dpi_w_1292.jpg 1292w" alt="Bushes, cables, clouds">
+      <source data-srcset="assets/images/hero--large_w_1847-short.jpg 1847w, /assets/images/hero--large-hi-dpi_w_3127-short.jpg 3127w" media="(min-width: 1380px)">
+      <source data-srcset="assets/images/hero--medium_w_1262.jpg 1262w, /assets/images/hero--medium-hi-dpi_w_2191.jpg 2191w" media="(min-width: 990px)">
+      <source data-srcset="assets/images/hero--small_w_1020.jpg 1020w, /assets/images/hero--small-hi-dpi_w_2889.jpg 2889w" media="(min-width: 640px)">
+      <img class="large-hero__image lazyload" data-srcset="assets/images/hero--smaller_w_651.jpg 651w, ./assets/images/hero--smaller-hi-dpi_w_1292.jpg 1292w" alt="Bushes, cables, clouds">
     </picture>
     
     <div  id="home"  class="large-hero__text-content page-section"  data-matching-link="#home-link">
@@ -145,7 +146,7 @@
                 </tr>
                 <tr>
                   <td></td>
-                  <td><a href="https://www.latlong.net/c/?lat=42.663620&long=23.374357" target="_blank"> <img id="map" src="./assets/images/map.png" alt=""> </a></td>
+                  <td><a href="https://www.latlong.net/c/?lat=42.663620&long=23.374357" target="_blank"> <img class="lazyload" id="map" data-src="./assets/images/map.png" alt=""> </a></td>
                   <!-- <td><div id="map"></div></td> -->
                 </tr>
                 <tr>
