@@ -918,6 +918,11 @@ a {
 		font-weight: 500;
 	}
 
+.section-title--less-margin {
+		margin-bottom: 1.3rem;
+		margin-top: 0;
+	}
+
 .section-title__icon {
 		display: block;
 		margin: 0 auto .6rem auto;
@@ -1450,5 +1455,73 @@ Instead edit gulp/templates/sprite */
 		        transform: scale(1);
 	}
 
-a {
+.modal {
+	position: fixed;
+	z-index: 5;
+	background-color: rgba(255, 255, 255, .94);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transform: scale(1.2);
+	        transform: scale(1.2);
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
 }
+
+.modal--is-visible {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+	}
+
+.modal__inner {
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		        transform: translateY(-50%);
+	}
+
+.modal__close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		font-size: 2rem;
+		-webkit-transform: scaleX(1.2);
+		        transform: scaleX(1.2);
+		-webkit-transform-origin: 100% 0;
+		        transform-origin: 100% 0;
+		color: #253b65;
+		cursor: pointer;
+	}
+
+.modal__close:hover {
+			color: #d59541;
+		}
+
+.contacts-table {
+	margin: 0 auto;
+}
+
+.contacts-table td:first-child {
+		font-weight: 700;
+		text-align: right;
+		padding-right: 20px;
+	}
+
+#map {
+	width: 100%;
+	height: auto;
+	background-color: grey;
+}
+
+@media (min-width: 530px) {
+
+#map {
+		width: 350px
+}
+	}

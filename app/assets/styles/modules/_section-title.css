@@ -23,6 +23,11 @@
 		font-weight: 500;
 	}
 
+	&--less-margin {
+		margin-bottom: 1.3rem;
+		margin-top: 0;
+	}
+
 	&__icon {
 		display: block;
 		margin: 0 auto .6rem auto;

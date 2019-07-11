@@ -1,0 +1,9 @@
+#map {
+	width: 100%;
+	height: auto;
+	background-color: grey;
+
+	@mixin atSmall {
+		width: 350px;
+	}
+}
