@@ -555,6 +555,20 @@ a {
 	overflow: hidden;
 }
 
+@media (min-width: 530px) {
+
+.wrapper {
+		padding: 0 50px
+}
+	}
+
+@media (min-width: 800px) {
+
+.wrapper {
+		padding: 0 70px
+}
+	}
+
 .wrapper .wrapper {
 		padding: 0;
 	}
@@ -844,13 +858,13 @@ a {
 
 @media (min-width: 800px) {
 
-.row--equal-height-at-medium {
+.flexbox .row--equal-height-at-medium {
 			display: -webkit-box;
 			display: flex
 	}
 	}
 
-.row--equal-height-at-medium > div {
+.flexbox .row--equal-height-at-medium > div {
 			float: none;
 			display: -webkit-box;
 			display: flex;
@@ -1034,6 +1048,10 @@ Instead edit gulp/templates/sprite */
 
 .icon {
       background-image: url('/assets/images/sprites/sprite-4e900ee7.svg');
+    }
+
+.no-svg .icon {
+      background-image: url('/assets/images/sprites/sprite-4e900ee7.png')
     }
 
 .icon--aski-logo {

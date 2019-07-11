@@ -6,6 +6,10 @@ Instead edit gulp/templates/sprite */
       background-image: url('/assets/images/sprites/sprite-4e900ee7.svg');
     }
 
+    .no-svg .icon {
+      background-image: url('/assets/images/sprites/sprite-4e900ee7.png')
+    }
+
   .icon--aski-logo {
     width: 160px;
     height: 48.2px;

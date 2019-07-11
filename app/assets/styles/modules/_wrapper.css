@@ -4,6 +4,14 @@
 	margin: 0 auto;
 	overflow: hidden;
 
+	@mixin atSmall {
+		padding: 0 50px;
+	}
+
+	@mixin atMedium {
+		padding: 0 70px;
+	}
+
 	.wrapper {
 		padding: 0;
 	}
