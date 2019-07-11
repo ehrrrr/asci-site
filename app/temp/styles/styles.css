@@ -1199,8 +1199,8 @@ Instead edit gulp/templates/sprite */
 
 .site-header--dark .site-header__logo {
 			padding: 15px 36px;
-			-webkit-transform: scale(.643);
-			        transform: scale(.643);
+			-webkit-transform: scale(.61);
+			        transform: scale(.61);
 			-webkit-transform-origin: 50% 0;
 			        transform-origin: 50% 0;
 		}

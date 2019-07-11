@@ -47,7 +47,7 @@
 
 		.site-header--dark & {
 			padding: 15px 36px;
-			transform: scale(.643);
+			transform: scale(.61);
 			transform-origin: 50% 0;
 		}
 	}
